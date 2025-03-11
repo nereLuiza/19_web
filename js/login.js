@@ -1,4 +1,4 @@
-const botaoLogin = document.querySelector('#entrar');
+const botaoLogin = document.querySelector('#bt-entrar');
 botaoLogin.addEventListener('click', autenticar);
 
 const areaMensagem = document.getElementById('msg');
