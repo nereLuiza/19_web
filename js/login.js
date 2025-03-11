@@ -1,4 +1,4 @@
-const botaoLogin = document.querySelector('entrar');
+const botaoLogin = document.querySelector('#entrar');
 botaoLogin.addEventListener('click', autenticar);
 
 const areaMensagem = document.getElementById('msg');
@@ -19,7 +19,7 @@ async function autenticar(e) {
     const response = await fetch(url, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json' 
       },
       body: JSON.stringify(dados)
     });

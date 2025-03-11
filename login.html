@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
     </head>
     <body>
-        <h2>Login</h2>
-        <form>
-            <label for='email'>Email: </label>
-            <input id='email' name='email' type='text'/>
+        <div class="formulario">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="email">
+                    Email:
+                </label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       required />
+                
+                <label for="senha">
+                    Senha:
+                </label>
+                <input type="password" 
+                       id="senha" 
+                       name="senha" 
+                       required />
+                
+                <button type="submit" id="bt-entrar">Entrar</button>
+            </form>
             </br>
-            </br>
-            <label for='senha'>Senha: </label>
-            <input id='senha' name='senha' type='password'/>
-            </br>
-            </br>
-            <input id='entrar' type='submit' value='Entrar' />
-        </form>
-
-        <br>
-        <span id="msg" class=""></span>
-
-        <script src="/js/login.js"></script>
+            <span id="msg" class=""></span>
+        </div>
     </body>
+    <script src="js/login.js"></script>
 </html>
