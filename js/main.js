@@ -4,7 +4,7 @@ const respAutor = document.getElementById('respAutor');
 
 botaoAutor.addEventListener('click', pegarInformacao);
 
-const urlBase = "https://back_end_na_vercel";
+const urlBase = "https://13-web.vercel.app";
 
 async function pegarInformacao() {
 
