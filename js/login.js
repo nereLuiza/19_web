@@ -32,8 +32,7 @@ async function autenticar(e) {
 
     localStorage.setItem('jwt', data.token);
 
-    areaMensagem.style = "color:green";
-    areaMensagem.innerHTML = "Usuário Autenticado com Sucesso! <br> Token: " + data.token;
+    window.location.href = 'login.html';
 
   } catch (error) {
     areaMensagem.style = "color:red";
