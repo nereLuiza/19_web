@@ -32,7 +32,7 @@ async function autenticar(e) {
 
     localStorage.setItem('jwt', data.token);
 
-    window.location.href = 'login.html';
+    window.location.href = 'home.html';
 
   } catch (error) {
     areaMensagem.style = "color:red";
