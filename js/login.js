@@ -24,6 +24,8 @@ async function autenticar(e) {
       body: JSON.stringify(dados)
     });
 
+    console.log(response);
+
     if (!response.ok) {
       throw new Error("Email/Senha incorretos! - " + response.status);
     }
