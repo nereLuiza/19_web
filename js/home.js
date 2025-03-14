@@ -1,9 +1,21 @@
-import { verificarAutenticacao } from "/js/autorizar.js"
+import { verificarAutenticacao } from './autorizar.js';
+
+(async () => {
+  const autenticado = await verificarAutenticacao();
+
+  const overlay = document.getElementById('loading-overlay');
+
+  const conteudo = document.getElementById('conteudo-protegido');
+
+  if (autenticado) {
+    overlay.remove();
+
+    conteudo.style.display = 'block';
+  } 
+})();
 
 const urlBase = "https://13-web.vercel.app";
 
-
-const conteudoProtegido = document.getElementById("conteudo-protegido");
 const tabelaCorpo = document.getElementById("tabela-usuarios");
 tabelaCorpo.innerHTML = 'Aguarde...';
 
@@ -35,10 +47,6 @@ try {
             `;
     tabelaCorpo.appendChild(linha);
   });
-
-  if(verificarAutenticacao) {
-    conteudoProtegido.style.display = "block";
-  }
 } catch (error) {
   console.error("Erro:", error);
 }
