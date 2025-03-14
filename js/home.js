@@ -1,3 +1,5 @@
+import { verificarAutenticacao } from "/js/autorizar.js"
+
 const urlBase = "https://13-web.vercel.app";
 
 const tabelaCorpo = document.getElementById("tabela-usuarios");
@@ -31,6 +33,10 @@ try {
             `;
     tabelaCorpo.appendChild(linha);
   });
+
+  if(verificarAutenticacao) {
+    conteudoProtegido.style.display = "block";
+  }
 } catch (error) {
   console.error("Erro:", error);
 }
